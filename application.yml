@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: status
+  name: myapp-argo-application
   namespace: argocd-build
 spec:
   project: default
