@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: myapp-argo-application
+  name: argo-application
   namespace: argocd-build
 spec:
   project: default
@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://github.com/yasir227/main.git
     targetRevision: HEAD
-    path: dev
+    path: .
   destination: 
     server: https://172.31.26.12:6443
     namespace: argocd-build
@@ -20,4 +20,4 @@ spec:
 
     automated:
       selfHeal: true
-      prune: true% 
+      prune: true
